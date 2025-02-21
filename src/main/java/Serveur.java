@@ -32,6 +32,9 @@ public class Serveur {
 
                 // Prendre les messages enregistrés du fichier json
                 String deserialisationReussi = deserialiserMessage();
+
+                // FAIRE EN SORTE DE GÉRÉR LE MESSAGE D'ERREUR SI LE FICHIER MESSAGE.JSON EXISTE PAS
+
                 socketOut.println("*** "+deserialisationReussi+" ***");
                 int nbMessagesMemoire = messages.size();
                 socketOut.println("Number of messages sent : "+nbMessagesMemoire);
